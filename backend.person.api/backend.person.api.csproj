@@ -21,6 +21,7 @@
             <PrivateAssets>all</PrivateAssets>
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
+        <PackageReference Include="Polly" Version="8.3.1" />
         <PackageReference Include="Serilog" Version="3.1.1" />
         <PackageReference Include="Serilog.AspNetCore" Version="8.0.1" />
         <PackageReference Include="Serilog.Expressions" Version="4.0.0" />
@@ -43,6 +44,12 @@
     <ItemGroup>
         <ProjectReference Include="..\backend.person.datalibrary\backend.person.datalibrary.csproj" />
         <ProjectReference Include="..\backend.person.modellibrary\backend.person.modellibrary.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="Services\ICostumerService.cs">
+        <DependentUpon>CostumerService.cs</DependentUpon>
+      </Compile>
     </ItemGroup>
 
     <PropertyGroup>

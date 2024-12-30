@@ -35,6 +35,7 @@ builder.Services.AddTransient<IPersonRepository, PersonRepository>();
 #region Services
 
 builder.Services.AddTransient<IPersonService, PersonService>();
+builder.Services.AddTransient<ICostumerService, CostumerService>();
 
 #endregion
 
